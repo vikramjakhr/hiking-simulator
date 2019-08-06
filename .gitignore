@@ -1,0 +1,17 @@
+### Basic ignore file
+
+# Binaries for programs and plugins
+hiking-simulator
+
+
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Vim swap files
+*.swp
+
+.idea/*
