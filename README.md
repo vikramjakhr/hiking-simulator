@@ -15,7 +15,7 @@ hiking-simulator --help
 go test --cover ./...
 ```
 
-* Build the binary or [Download from here](./hiking-simulator)
+* Build the binary or [Download from here](https://github.com/vikramjakhr/hiking-simulator/releases/download/v1.0.0/hiking-simulator)
 ```
 go build
 ```
