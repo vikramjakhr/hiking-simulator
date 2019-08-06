@@ -24,10 +24,12 @@ type SimulationInput struct {
 	Hikers  []Hiker  `yaml:"hikers"`
 }
 
+// Return new Simulation
 func NewSimulationInput() (*SimulationInput) {
 	return &SimulationInput{}
 }
 
+// Load simulation YAML file
 func (input *SimulationInput) LoadSimulationInput() error {
 	file, err := ioutil.ReadFile(inputFileToLoad)
 	if err != nil {

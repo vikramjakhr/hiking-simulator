@@ -14,6 +14,7 @@ func main() {
 		log.Fatal("E! " + err.Error())
 	}
 
+	// lets go hiking
 	simulator.Hike(simulatorInput)
 
 }
