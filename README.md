@@ -22,7 +22,10 @@ go build
 
 ## How to run it:
 
-* [Download from here](https://github.com/vikramjakhr/hiking-simulator/releases/download/v1.0.0/hiking-simulator)
+* [Download the binary from here](https://github.com/vikramjakhr/hiking-simulator/releases/download/v1.0.0/hiking-simulator)
+* [Download the input yaml from here](https://github.com/vikramjakhr/hiking-simulator/releases/download/v1.0.0/input.yaml)
+
+Place the above downloaded files in any directory and run below command from that directory
 ```
 ./hiking-simulator 
 ```
