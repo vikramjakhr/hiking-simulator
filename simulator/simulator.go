@@ -16,7 +16,11 @@ type Response struct {
 }
 
 // Actual logic for hiking with shortest time
-func Hike(input *parser.SimulationInput) (*Response) {
+func Hike(input *parser.SimulationInput) (*Response, error) {
+	err := validate(input)
+	if err != nil {
+		return nil, err
+	}
 	bfts := make([]BridgeFastestTime, len(input.Bridges))
 
 	var totalTime float64
@@ -58,11 +62,14 @@ func Hike(input *parser.SimulationInput) (*Response) {
 		totalTime = totalTime + fastestTime
 	}
 	fmt.Printf("Total time for crossing: %f\n", totalTime)
-	return &Response{BAndTimes: bfts, TotalTime: totalTime}
+	return &Response{BAndTimes: bfts, TotalTime: totalTime}, nil
 }
 
-func validate(input *parser.SimulationInput) {
-
+func validate(input *parser.SimulationInput) error {
+	if len(input.Hikers) < 1 {
+		return fmt.Errorf("Atleast one hiker needed")
+	}
+	return nil
 }
 
 // Cross the bridge

@@ -33,6 +33,9 @@ func main() {
 	}
 
 	// lets go hiking
-	simulator.Hike(simulatorInput)
+	_, err = simulator.Hike(simulatorInput)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
 
 }

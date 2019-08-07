@@ -13,4 +13,5 @@ RUN go install -v ./...
 # Now copy it into our base image.
 FROM gcr.io/distroless/base
 COPY --from=build /go/bin/app /
+COPY input.yaml /
 CMD ["/app"]

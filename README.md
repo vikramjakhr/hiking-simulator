@@ -19,3 +19,19 @@ go test --cover ./...
 ```
 go build
 ```
+
+## How to run it:
+
+```
+hiking-simulator 
+```
+* [Download from here](https://github.com/vikramjakhr/hiking-simulator/releases/download/v1.0.0/hiking-simulator)
+```
+hiking-simulator 
+```
+
+* Run as a container
+```
+docker pull vikramjakhr/mine:hiking-simulator
+docker run -it vikramjakhr/mine:hiking-simulator
+```

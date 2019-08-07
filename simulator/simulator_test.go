@@ -23,7 +23,11 @@ func Test(t *testing.T) {
 			{Name: "R", Speed: 50},
 		},
 	}
-	response := Hike(input)
+	response, err := Hike(input)
+
+	if err != nil {
+		t.Errorf("Error occurred %v", err.Error())
+	}
 
 	if len(response.BAndTimes) != 3 {
 		t.Errorf("Expected %d fastest response, found %d", len(input.Bridges), len(response.BAndTimes))
